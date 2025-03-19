@@ -1,0 +1,296 @@
+/* === ГЛОБАЛЬНЫЕ СТИЛИ === */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Чёрный фон */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Контейнер всей страницы */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Основной контент (растягивается, чтобы футер был внизу) */
+main {
+    flex: 1;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* === ХЕДЕР И НАВИГАЦИЯ === */
+header {
+    background: #6a0dad; /* Фиолетовый */
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #c79eff; /* Светло-фиолетовый */
+}
+
+/* === ФУТЕР === */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #6a0dad;
+    color: #ffffff;
+    margin-top: auto; /* Прижимает футер к низу */
+}
+
+/* === КНОПКИ === */
+.btn {
+    display: inline-block;
+    background-color: #6a0dad; /* Фиолетовый */
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #5b0ca3; /* Чуть темнее при наведении */
+}
+
+.btn-danger {
+    background-color: #c70039; /* Красная кнопка для удаления */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #900c3f;
+}
+
+/* === ФОРМЫ === */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea, select {
+    background: #282828;
+    color: #ffffff;
+    border: 1px solid #6a0dad;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #c79eff;
+}
+
+/* === СПИСОК ДРУЗЕЙ === */
+.friends-section {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.friends-list {
+    list-style: none;
+    padding: 0;
+}
+
+.friends-list li {
+    background: #292929;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 5px solid #6a0dad;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* === ПОСТЫ === */
+.post {
+    background: #292929;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 5px solid #6a0dad;
+}
+
+.post strong {
+    color: #c79eff;
+}
+
+/* === СООБЩЕНИЯ === */
+.message-box {
+    border: 1px solid #6a0dad;
+    padding: 10px;
+    background: #1e1e1e;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.message-box strong {
+    color: #c79eff;
+}
+
+/* === СТРАНИЦА ЛОГИНА И РЕГИСТРАЦИИ === */
+.auth-section {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.auth-form input {
+    background: #282828;
+    color: #ffffff;
+    border: 1px solid #6a0dad;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: #c79eff;
+}
+
+/* === ОШИБКИ И УСПЕШНЫЕ СООБЩЕНИЯ === */
+.success-message {
+    color: #c79eff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.error-message {
+    color: #ff4d4d;
+    font-weight: bold;
+    text-align: center;
+}
+.messages-section {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.users-list {
+    list-style: none;
+    padding: 0;
+}
+
+.users-list li {
+    background: #292929;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 5px solid #6a0dad;
+}
+
+.users-list li a {
+    color: #c79eff;
+    text-decoration: none;
+    display: block;
+}
+
+.chat-box {
+    border: 1px solid #6a0dad;
+    padding: 10px;
+    background: #1e1e1e;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.message {
+    background: #292929;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.message strong {
+    color: #c79eff;
+}
+
+.message small {
+    display: block;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.message-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message-form textarea {
+    background: #282828;
+    color: #ffffff;
+    border: 1px solid #6a0dad;
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+}
+
+.message-form textarea:focus {
+    outline: none;
+    border-color: #c79eff;
+}
